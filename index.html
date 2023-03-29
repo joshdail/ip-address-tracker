@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+    <title>IP Address Tracker</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header-title">IP Address Tracker</h1>
+      <form class="search-bar" id="form">
+        <label for="ip-address" class="sr-only"
+          >Search for any IP address</label
+        >
+        <input
+          type="text"
+          class="search-bar-input"
+          name="ip-address"
+          id="ip-address"
+          placeholder="Search for any IP address"
+        />
+        <button
+          type="button"
+          class="btn-submit"
+          id="btn-submit"
+          aria-label="search"
+        >
+          <img src="images/icon-arrow.svg" alt="search" />
+        </button>
+      </form>
+    </header>
+    <main>
+      <div class="result-container">
+        <section class="section-result section-ip-address">
+          <h5 class="result-tag">IP Address</h5>
+          <div class="line-wrapper">
+            <p class="result-data result-ip-address" id="result-ip-address"></p>
+          </div>
+        </section>
+        <section class="section-result section-location">
+          <h5 class="result-tag">Location</h5>
+          <div class="line-wrapper">
+            <p class="result-data result-location" id="result-location"></p>
+            <p class="result-data result-location" id="result-location-2"></p>
+          </div>
+        </section>
+        <section class="section-result section-timezone">
+          <h5 class="result-tag">Timezone</h5>
+          <div class="line-wrapper">
+            <p class="result-data result-timezone" id="result-timezone"></p>
+          </div>
+        </section>
+        <section class="section-result section-isp">
+          <h5 class="result-tag">ISP</h5>
+          <div class="line-wrapper">
+            <p class="result-data result-isp" id="result-isp"></p>
+          </div>
+        </section>
+      </div>
+      <div id="map"></div>
+    </main>
+  </body>
+</html>
